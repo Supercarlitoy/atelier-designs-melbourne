@@ -2,15 +2,24 @@
   <div class="homepage">
     <!-- Hero Section -->
     <section class="hero">
+      <!-- Geometric Shapes -->
+      <div class="geometric-shapes">
+        <div class="shape shape--circle shape--primary" style="width: 120px; height: 120px; top: 20%; right: 15%; animation-delay: 0s;"></div>
+        <div class="shape shape--square shape--accent-1" style="width: 80px; height: 80px; top: 60%; right: 25%; animation-delay: 1s;"></div>
+        <div class="shape shape--circle shape--secondary" style="width: 60px; height: 60px; top: 40%; right: 8%; animation-delay: 2s;"></div>
+        <div class="shape shape--square shape--accent-2" style="width: 100px; height: 100px; top: 75%; right: 40%; animation-delay: 0.5s;"></div>
+        <div class="shape shape--circle shape--accent-4" style="width: 40px; height: 40px; top: 30%; right: 35%; animation-delay: 1.5s;"></div>
+      </div>
+      
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <h1 class="hero-title fade-in">
+            <h1 class="hero-title fade-in text-white">
               Melbourne's
-              <span class="hero-title-accent">Design</span>
+              <span class="hero-title-accent text-primary">Design</span>
               Directory
             </h1>
-            <p class="hero-description fade-in">
+            <p class="hero-description fade-in text-white">
               The definitive, curated index of Melbourne's finest design talent. 
               Discover award-winning studios, agencies, and independent designers 
               who are shaping the creative landscape.
@@ -39,7 +48,7 @@
     <section class="search-section" ref="directoryRef">
       <div class="container">
         <div class="search-content">
-          <h2 class="search-title slide-up">Find Your Perfect Design Partner</h2>
+          <h2 class="search-title slide-up text-white">Find Your Perfect Design Partner</h2>
           <div class="search-bar slide-up">
             <div class="search-input-wrapper">
               <Icon name="lucide:search" class="search-icon" />
@@ -89,14 +98,14 @@
         <!-- Loading State -->
         <div v-if="isLoading" class="loading-state">
           <div class="loading-spinner"></div>
-          <p>Loading studios...</p>
+          <p class="text-white">Loading studios...</p>
         </div>
 
         <!-- Empty State -->
         <div v-if="!isLoading && filteredStudios.length === 0" class="empty-state">
           <Icon name="lucide:search-x" class="empty-icon" />
-          <h3>No studios found</h3>
-          <p>Try adjusting your search criteria or browse all studios.</p>
+          <h3 class="text-white">No studios found</h3>
+          <p class="text-muted">Try adjusting your search criteria or browse all studios.</p>
           <button @click="clearFilters" class="btn btn--secondary">Clear Filters</button>
         </div>
       </div>
@@ -107,20 +116,20 @@
       <div class="container">
         <div class="stats-grid">
           <div class="stat-item slide-up">
-            <div class="stat-number">{{ studios.length }}+</div>
-            <div class="stat-label">Design Studios</div>
+            <div class="stat-number text-primary">{{ studios.length }}+</div>
+            <div class="stat-label text-white">Design Studios</div>
           </div>
           <div class="stat-item slide-up">
-            <div class="stat-number">500+</div>
-            <div class="stat-label">Projects Showcased</div>
+            <div class="stat-number text-secondary">500+</div>
+            <div class="stat-label text-white">Projects Showcased</div>
           </div>
           <div class="stat-item slide-up">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">Specialties</div>
+            <div class="stat-number" style="color: var(--color-accent-1);">50+</div>
+            <div class="stat-label text-white">Specialties</div>
           </div>
           <div class="stat-item slide-up">
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Melbourne Based</div>
+            <div class="stat-number" style="color: var(--color-accent-2);">100%</div>
+            <div class="stat-label text-white">Melbourne Based</div>
           </div>
         </div>
       </div>
@@ -309,7 +318,7 @@ onMounted(() => {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 70%, rgba(194, 168, 120, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 70%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
     pointer-events: none;
   }
 }
@@ -319,6 +328,8 @@ onMounted(() => {
   grid-template-columns: 1fr 1fr;
   gap: var(--space-3xl);
   align-items: center;
+  position: relative;
+  z-index: 2;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -424,7 +435,7 @@ onMounted(() => {
   left: var(--space-m);
   top: 50%;
   transform: translateY(-50%);
-  color: var(--color-text);
+  color: var(--color-text-muted);
   width: 20px;
   height: 20px;
 }
@@ -445,7 +456,7 @@ onMounted(() => {
   }
 
   &::placeholder {
-    color: var(--color-text);
+    color: var(--color-text-muted);
   }
 }
 
@@ -512,7 +523,7 @@ onMounted(() => {
 .empty-icon {
   width: 48px;
   height: 48px;
-  color: var(--color-text);
+  color: var(--color-text-muted);
   margin-bottom: var(--space-m);
 }
 
@@ -537,16 +548,14 @@ onMounted(() => {
 }
 
 .stat-number {
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-display);
   font-size: var(--step-5);
-  font-weight: 600;
-  color: var(--color-primary);
+  font-weight: 700;
   margin-bottom: var(--space-s);
 }
 
 .stat-label {
   font-size: var(--step-0);
-  color: var(--color-text);
 }
 </style>
 

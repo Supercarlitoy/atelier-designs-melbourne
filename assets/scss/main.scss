@@ -1,24 +1,13 @@
 // ===================================
 // ATELIER DESIGNS - DESIGN SYSTEM
-// "Quarried Stone" - Monumental Minimalism
+// Modern Minimalist with Vibrant Accents
 // ===================================
 
-// CSS Custom Properties (Design Tokens)
+// TYPOGRAPHY SCALE (Fluid Typography)
 :root {
-  // Color Palette: "Quarried Stone"
-  --color-background: #191919;
-  --color-surface: #212121;
-  --color-text: #A3A3A3;
-  --color-heading: #E5E5E5;
-  --color-primary: #C2A878;
-  --color-border: #333333;
-  --color-success: #22C55E;
-  --color-error: #EF4444;
-  --color-warning: #F59E0B;
-
-  // Typography Scale (Fluid)
-  --font-family-serif: 'Playfair Display', serif;
-  --font-family-sans: 'Inter', sans-serif;
+  // Font Families - Modern Sans Serif Stack (Cador-inspired)
+  --font-family-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-display: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
   // Fluid Typography Scale
   --step--2: clamp(0.69rem, calc(0.66rem + 0.18vw), 0.80rem);
@@ -32,30 +21,52 @@
   --step-6: clamp(2.99rem, calc(2.37rem + 3.11vw), 4.77rem);
   --step-7: clamp(3.58rem, calc(2.77rem + 4.07vw), 5.96rem);
 
-  // Spacing Scale (Fluid)
+  // MODERN VIBRANT COLOR PALETTE
+  --color-background: #0A0A0A;        // Deep black
+  --color-surface: #111111;           // Slightly lighter black
+  --color-border: #222222;            // Dark gray borders
+  
+  // Text Colors - Pure whites and grays
+  --color-heading: #FFFFFF;           // Pure white for headings
+  --color-text: #FFFFFF;              // Pure white for body text
+  --color-text-muted: #CCCCCC;        // Light gray for muted text
+  
+  // Vibrant Accent Colors (inspired by Synthese reference)
+  --color-primary: #6366F1;           // Vibrant indigo
+  --color-secondary: #8B5CF6;         // Purple
+  --color-accent-1: #F59E0B;          // Orange
+  --color-accent-2: #10B981;          // Emerald green
+  --color-accent-3: #EF4444;          // Red
+  --color-accent-4: #06B6D4;          // Cyan
+  
+  // SPACING SCALE (T-shirt sizing)
   --space-3xs: clamp(0.25rem, calc(0.23rem + 0.11vw), 0.31rem);
-  --space-2xs: clamp(0.50rem, calc(0.45rem + 0.22vw), 0.63rem);
+  --space-2xs: clamp(0.50rem, calc(0.46rem + 0.22vw), 0.63rem);
   --space-xs: clamp(0.75rem, calc(0.68rem + 0.33vw), 0.94rem);
   --space-s: clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem);
-  --space-m: clamp(1.50rem, calc(1.36rem + 0.65vw), 1.88rem);
-  --space-l: clamp(2.00rem, calc(1.82rem + 0.87vw), 2.50rem);
-  --space-xl: clamp(3.00rem, calc(2.73rem + 1.30vw), 3.75rem);
-  --space-2xl: clamp(4.00rem, calc(3.64rem + 1.74vw), 5.00rem);
-  --space-3xl: clamp(6.00rem, calc(5.45rem + 2.61vw), 7.50rem);
+  --space-m: clamp(1.50rem, calc(1.37rem + 0.65vw), 1.88rem);
+  --space-l: clamp(2.00rem, calc(1.83rem + 0.87vw), 2.50rem);
+  --space-xl: clamp(3.00rem, calc(2.74rem + 1.30vw), 3.75rem);
+  --space-2xl: clamp(4.00rem, calc(3.65rem + 1.74vw), 5.00rem);
+  --space-3xl: clamp(6.00rem, calc(5.48rem + 2.61vw), 7.50rem);
 
-  // Layout
+  // LAYOUT & GRID
   --container-max-width: 1200px;
   --container-padding: var(--space-m);
+  --grid-columns: 12;
+  --grid-gap: var(--space-m);
+
+  // BORDER RADIUS
   --border-radius: 8px;
-  --border-radius-lg: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
 
-  // Animation
+  // TRANSITIONS
   --transition-fast: 0.15s ease-out;
-  --transition-base: 0.25s ease-out;
-  --transition-slow: 0.4s ease-out;
-  --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-base: 0.3s ease-out;
+  --transition-slow: 0.5s ease-out;
 
-  // Z-index Scale
+  // Z-INDEX SCALE
   --z-dropdown: 1000;
   --z-sticky: 1020;
   --z-fixed: 1030;
@@ -63,13 +74,18 @@
   --z-modal: 1050;
   --z-popover: 1060;
   --z-tooltip: 1070;
+
+  // SHADOWS
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-// ===================================
-// RESET & BASE STYLES
-// ===================================
-
-* {
+// GLOBAL RESET & BASE STYLES
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -91,28 +107,26 @@ body {
   overflow-x: hidden;
 }
 
-// ===================================
-// TYPOGRAPHY
-// ===================================
-
+// TYPOGRAPHY STYLES
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-serif);
-  color: var(--color-heading);
+  font-family: var(--font-family-display);
+  font-weight: 700;
   line-height: 1.2;
-  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: var(--space-s);
   letter-spacing: -0.02em;
 }
 
-h1 { font-size: var(--step-6); }
-h2 { font-size: var(--step-5); }
-h3 { font-size: var(--step-4); }
-h4 { font-size: var(--step-3); }
-h5 { font-size: var(--step-2); }
-h6 { font-size: var(--step-1); }
+h1 { font-size: var(--step-7); font-weight: 900; }
+h2 { font-size: var(--step-5); font-weight: 800; }
+h3 { font-size: var(--step-3); font-weight: 700; }
+h4 { font-size: var(--step-2); font-weight: 600; }
+h5 { font-size: var(--step-1); font-weight: 600; }
+h6 { font-size: var(--step-0); font-weight: 600; }
 
 p {
-  font-size: var(--step-0);
-  line-height: 1.7;
+  margin-bottom: var(--space-s);
+  max-width: 65ch;
   color: var(--color-text);
 }
 
@@ -120,16 +134,13 @@ a {
   color: var(--color-primary);
   text-decoration: none;
   transition: color var(--transition-fast);
-  
+
   &:hover {
-    color: var(--color-heading);
+    color: var(--color-secondary);
   }
 }
 
-// ===================================
-// LAYOUT UTILITIES
-// ===================================
-
+// CONTAINER SYSTEM
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
@@ -166,18 +177,16 @@ a {
   justify-content: space-between;
 }
 
-// ===================================
-// COMPONENT BASE STYLES
-// ===================================
-
+// BUTTON SYSTEM
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: var(--space-xs);
   padding: var(--space-s) var(--space-l);
-  font-family: var(--font-family-sans);
+  font-family: var(--font-family-display);
   font-size: var(--step-0);
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   border: none;
   border-radius: var(--border-radius);
@@ -186,50 +195,53 @@ a {
   position: relative;
   overflow: hidden;
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left var(--transition-slow);
+  }
+
+  &:hover::before {
+    left: 100%;
+  }
+
+  // Primary Button - Vibrant Indigo
   &--primary {
-    background-color: var(--color-primary);
-    color: var(--color-background);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: #FFFFFF;
+    box-shadow: var(--shadow-lg);
 
     &:hover {
-      background-color: var(--color-heading);
       transform: translateY(-2px);
+      box-shadow: var(--shadow-xl);
     }
   }
 
+  // Secondary Button - Emerald Green
   &--secondary {
-    background-color: transparent;
-    color: var(--color-heading);
-    border: 1px solid var(--color-border);
+    background: linear-gradient(135deg, var(--color-accent-2), var(--color-accent-4));
+    color: #FFFFFF;
+    box-shadow: var(--shadow-base);
 
     &:hover {
-      border-color: var(--color-primary);
-      color: var(--color-primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
     }
   }
 
+  // Text Button
   &--text {
-    background-color: transparent;
-    color: var(--color-text);
-    padding: var(--space-xs) 0;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background-color: var(--color-primary);
-      transition: width var(--transition-base);
-    }
+    background: transparent;
+    color: var(--color-heading);
+    padding: var(--space-s);
 
     &:hover {
-      color: var(--color-heading);
-
-      &::after {
-        width: 100%;
-      }
+      color: var(--color-primary);
     }
   }
 }
@@ -239,16 +251,59 @@ a {
   border-radius: var(--border-radius-lg);
   padding: var(--space-l);
   transition: transform var(--transition-base);
+  border: 1px solid var(--color-border);
 
   &:hover {
     transform: translateY(-4px);
+    border-color: var(--color-primary);
   }
 }
 
-// ===================================
-// ANIMATION UTILITIES
-// ===================================
+// GEOMETRIC SHAPES SYSTEM
+.geometric-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
 
+.shape {
+  position: absolute;
+  opacity: 0.8;
+  animation: float 6s ease-in-out infinite;
+
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &--triangle {
+    width: 0;
+    height: 0;
+    background: none !important;
+  }
+
+  &--square {
+    border-radius: var(--border-radius);
+  }
+
+  &--primary { background: var(--color-primary); }
+  &--secondary { background: var(--color-secondary); }
+  &--accent-1 { background: var(--color-accent-1); }
+  &--accent-2 { background: var(--color-accent-2); }
+  &--accent-3 { background: var(--color-accent-3); }
+  &--accent-4 { background: var(--color-accent-4); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+// ANIMATION UTILITIES
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -271,13 +326,24 @@ a {
   }
 }
 
-// ===================================
-// RESPONSIVE UTILITIES
-// ===================================
+// UTILITY CLASSES
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
 
+.font-display { font-family: var(--font-family-display); }
+.font-sans { font-family: var(--font-family-sans); }
+
+.text-white { color: #FFFFFF !important; }
+.text-muted { color: var(--color-text-muted) !important; }
+.text-primary { color: var(--color-primary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+
+// RESPONSIVE UTILITIES
 @media (max-width: 768px) {
-  .container {
+  :root {
     --container-padding: var(--space-s);
+    --grid-gap: var(--space-s);
   }
 
   .grid {
@@ -289,10 +355,7 @@ a {
   }
 }
 
-// ===================================
 // ACCESSIBILITY
-// ===================================
-
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
