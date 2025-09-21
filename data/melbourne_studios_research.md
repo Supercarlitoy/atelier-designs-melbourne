@@ -93,3 +93,73 @@
 - **Special Programs:** Student internships (copywriting and design) for course credits
 - **Status:** Creative, Modern, Youth-focused
 
+
+
+## Additional Melbourne Design Studios (From Clutch Research)
+
+### 4. Brandwell
+- **Location:** Collingwood, Australia
+- **Specialties:** Branding (30%), Logo Design (30%), Packaging Design (30%)
+- **Rating:** 4.9/5 (22 reviews)
+- **Budget:** $10,000+
+- **Hourly Rate:** $150-$199/hr
+- **Team Size:** 2-9 employees
+- **Description:** Branding and design agency specializing in comprehensive brand identities, packaging design, logo refresh, brand guidelines, and website development. Known for holistic and enduring approach to branding.
+- **Key Strengths:** Responsive communication, strategic branding insights, artistic design capabilities
+
+### 5. Chromatix
+- **Location:** Melbourne, Australia
+- **Specialties:** Web Design, Development, Consulting
+- **Rating:** High (100% positive feedback)
+- **Description:** Web design, development, and consulting company known for crafting professional, high-converting websites.
+- **Key Strengths:** Project management, communication, strategic approach, timely delivery
+
+### 6. Luminary
+- **Location:** Melbourne, Australia
+- **Specialties:** Web Development, Content Management Systems, User Experience Design
+- **Rating:** High (100% positive feedback)
+- **Description:** Digital agency specializing in web development, content management systems, and user experience design.
+- **Key Strengths:** Timely project delivery, technical expertise, exceptional team collaboration
+
+### 7. Emote Digital
+- **Location:** Melbourne, Australia
+- **Specialties:** Digital Marketing, SEO, Web Development, Branding, Online Advertising
+- **Rating:** High (90% positive feedback)
+- **Description:** Digital marketing agency specializing in SEO, web development, branding, and online advertising.
+- **Key Strengths:** Responsiveness, transparency, effective project management, personalized approach
+
+### 8. Still Not Scared
+- **Location:** Melbourne, Australia
+- **Specialties:** Web Development, Brand Design
+- **Rating:** High (100% positive feedback)
+- **Description:** Digital agency specializing in web development and brand design.
+- **Key Strengths:** Creativity, seamless client integration, effective project management, collaborative approach
+
+### 9. Pure Bold
+- **Location:** Melbourne, Australia
+- **Specialties:** Website Design, E-commerce Development, Branding, Marketing Strategy
+- **Rating:** High (100% positive feedback)
+- **Description:** Digital marketing agency specializing in website design, e-commerce development, branding, and marketing strategy.
+- **Key Strengths:** Project management, responsiveness, tailored solutions, strategic insights
+
+### 10. FutureBrand Australia
+- **Location:** Melbourne, Australia
+- **Specialties:** Brand Development, Rebranding, Brand Architecture, Strategic Brand Positioning
+- **Rating:** High (100% positive feedback)
+- **Description:** Brand development agency specializing in rebranding, brand architecture, and strategic brand positioning.
+- **Key Strengths:** Professionalism, collaborative approach, expertise, attention to detail
+
+### 11. 99d Studio
+- **Location:** Melbourne, Australia
+- **Specialties:** Branding, Promotional Materials, Website Design
+- **Rating:** High (100% positive feedback)
+- **Description:** Comprehensive design and creative agency offering branding, promotional materials, and website design services.
+- **Key Strengths:** Impactful branding, creative solutions, exceptional project management, cost-effectiveness
+
+### 12. Cobalt Design
+- **Location:** Melbourne, Australia
+- **Specialties:** Product Design, Medical Device Design
+- **Rating:** High (100% positive feedback)
+- **Description:** Product design company specializing in creating innovative and user-friendly medical devices.
+- **Key Strengths:** Communication, professionalism, exceptional teamwork, complex requirement handling
+
