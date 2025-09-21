@@ -4,7 +4,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   
   modules: [
-    '@nuxt/ui'
+    '@nuxt/ui',
+    '@nuxt/icon'
   ],
 
   css: ['@/assets/scss/main.scss'],
@@ -47,7 +48,7 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { 
           rel: 'stylesheet', 
-          href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap' 
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap' 
         }
       ]
     }

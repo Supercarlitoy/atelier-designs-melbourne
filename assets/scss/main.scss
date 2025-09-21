@@ -5,9 +5,9 @@
 
 // TYPOGRAPHY SCALE (Fluid Typography)
 :root {
-  // Font Families - Modern Sans Serif Stack (Cador-inspired)
-  --font-family-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-family-display: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  // Font Families - Modern Sans Serif Stack (Inter-based)
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
   // Fluid Typography Scale
   --step--2: clamp(0.69rem, calc(0.66rem + 0.18vw), 0.80rem);
